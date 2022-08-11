@@ -16,17 +16,10 @@ Tag.init(
     tag_name: {
       type: DataTypes.STRING,
     },
-    productTag: {
-      type: DataTypes.INTEGER,
-      references: Product.id,//wrong 
-    },
-    tag_id: {
-      type: DataTypes.INTEGER,
-    },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'tag',
